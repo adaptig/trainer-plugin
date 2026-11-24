@@ -1,0 +1,121 @@
+{
+  "snapshot_date": "2026-11-20",
+  "lucide_revision": "c1a02a04d4f3f7049d44567d62b8b06cff0b9103",
+  "files": [
+    {
+      "path": "logos/adaptig-wordmark.png",
+      "sha256": "05b3165dc1ee283b0a7608d1f4392747f61a945b0e15691f76a5b240d54cf9e5",
+      "source": "skills/explainer-one-pager/adaptig-brand/logo/adaptig-wordmark.png"
+    },
+    {
+      "path": "logos/adaptig-logomark.png",
+      "sha256": "8eb6b81f8ceaa0e9a73cc52ac263758d8511d006fc394a4e6f638ceccb994ee0",
+      "source": "Adaptig brand assets"
+    },
+    {
+      "path": "shapes/shape-asterisk-beige.png",
+      "sha256": "7cfa937572aea844fe3d7be2ef84160b708a667267352adf1bbf2689c2c97179",
+      "source": "Adaptig brand assets"
+    },
+    {
+      "path": "shapes/shape-asterisk-orange.png",
+      "sha256": "ec783a90219efb018db67f4090a376c8739f492f21eb2ef3443748b2f6f9f973",
+      "source": "Adaptig brand assets"
+    },
+    {
+      "path": "shapes/shape-halfdome-green.png",
+      "sha256": "cc717a11484927f8339583fa85eceb6ac32f63ced9beb69fe6de64155e8aaf54",
+      "source": "Adaptig brand assets"
+    },
+    {
+      "path": "shapes/shape-leaf-green.png",
+      "sha256": "d048900ef34c54ae74a58a09da29eb2e3571bf3e4d84ffdfdb7b8ef973805d0b",
+      "source": "Adaptig brand assets"
+    },
+    {
+      "path": "shapes/shape-quatrefoil-blue.png",
+      "sha256": "6c861ebddd59d969eaef9cfe5f4a20d59bdc09de3af6f7eaf0c4777cc29fdeb6",
+      "source": "Adaptig brand assets"
+    },
+    {
+      "path": "shapes/shape-triangle-black.png",
+      "sha256": "b48c155dd8a9cfa3daa86cad8e72ea8a1379e66d13cbf2332592d74fdcbad427",
+      "source": "Adaptig brand assets"
+    },
+    {
+      "path": "fonts/OFL-Bricolage-Grotesque.txt",
+      "sha256": "46ba5f18ee20ea529f21d96c0ef8637a8314c1a5cfb2aa84018bc8157cbeff41",
+      "source": "skills/explainer-one-pager/adaptig-brand/fonts/OFL-Bricolage-Grotesque.txt"
+    },
+    {
+      "path": "fonts/OFL-Figtree.txt",
+      "sha256": "bb272dfcd8801eb31fb98fe51828f76f0e41ac82f89256101df8021aa3d30ce2",
+      "source": "skills/explainer-one-pager/adaptig-brand/fonts/OFL-Figtree.txt"
+    },
+    {
+      "path": "fonts/bricolage-grotesque-var-normal-latin-ext.woff2",
+      "sha256": "a22c997a894377f36d81c904163e0c05fbbcd32f0ca2e7beedb86b39be1296a1",
+      "source": "skills/explainer-one-pager/adaptig-brand/fonts/bricolage-grotesque-var-normal-latin-ext.woff2"
+    },
+    {
+      "path": "fonts/bricolage-grotesque-var-normal-latin.woff2",
+      "sha256": "4fd48b2c1ab27220e71f15f990550261b35245c3bdfd8d8025b4bdac0459ee2d",
+      "source": "skills/explainer-one-pager/adaptig-brand/fonts/bricolage-grotesque-var-normal-latin.woff2"
+    },
+    {
+      "path": "fonts/figtree-var-normal-latin-ext.woff2",
+      "sha256": "f153aa07c1b16fbb12391c2512860c97819a0a9fd014f338b2b3f12496479d13",
+      "source": "skills/explainer-one-pager/adaptig-brand/fonts/figtree-var-normal-latin-ext.woff2"
+    },
+    {
+      "path": "fonts/figtree-var-normal-latin.woff2",
+      "sha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
+      "source": "skills/explainer-one-pager/adaptig-brand/fonts/figtree-var-normal-latin.woff2"
+    },
+    {
+      "path": "icons/calendar.svg",
+      "sha256": "312ac8e715ac2b71bcc942dec2e8de9c1929085474f08885af35b563f6aa7a0b",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/calendar.svg"
+    },
+    {
+      "path": "icons/circle-check.svg",
+      "sha256": "9711e045a5999f8a3b0782eb88e09b04e0559bc7b379dcc0a4ae645223e10345",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/circle-check.svg"
+    },
+    {
+      "path": "icons/clipboard-list.svg",
+      "sha256": "2b91abc2e8ee8ba4c2e0f77d506a47a7a9774b0d4de3fa4b27e822a6376ab892",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/clipboard-list.svg"
+    },
+    {
+      "path": "icons/file-text.svg",
+      "sha256": "52ca55846c202335fb870c8aa23e9345630ec10489303756d62e750f7109605c",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/file-text.svg"
+    },
+    {
+      "path": "icons/lightbulb.svg",
+      "sha256": "e33bbec15b1e64cca958e086850f951c0dc2201cd5778bb3695fda3cb6ea457d",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/lightbulb.svg"
+    },
+    {
+      "path": "icons/message-circle.svg",
+      "sha256": "146f39740fe50844394d56ae1f8821937655bcfff3842bf6fe8ffc0bcd324076",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/message-circle.svg"
+    },
+    {
+      "path": "icons/presentation.svg",
+      "sha256": "5d15abfdfca21e40abe3b8daead5e8f6a7d38e623fb1a4dd8890448c79e75342",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/presentation.svg"
+    },
+    {
+      "path": "icons/users.svg",
+      "sha256": "eeed488a1ec95ba730dd69996536fb65061d6ea273afb2429ae47e65eebf401c",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/icons/users.svg"
+    },
+    {
+      "path": "icons/LICENSE-LUCIDE.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/c1a02a04d4f3f7049d44567d62b8b06cff0b9103/LICENSE"
+    }
+  ]
+}

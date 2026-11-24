@@ -1,0 +1,49 @@
+/* Adaptig palette, with open font substitutes for this portable pack. */
+
+:root {
+  /* ---- Colour ------------------------------------------------------------ */
+  --paper-beige: #f9f5ea;     /* default page background */
+  --charcoal-black: #212124;  /* body text, logomark on light */
+  --orange-peel: #fa5929;     /* energy, CTA, the one loud accent */
+  --aqua-blue: #0a66db;       /* trust, professional, links */
+  --leaf-green: #30966b;      /* growth, success, positive delta */
+  --sky-blue: #abc9f5;        /* secondary surface, soft accent */
+
+  /* Derived — tints only, never new hues. */
+  --paper-deep: #f2ecdc;      /* banded rows, table zebra */
+  --rule: rgba(33, 33, 36, 0.14);
+  --ink-soft: rgba(33, 33, 36, 0.62);
+
+  /* ---- Type -------------------------------------------------------------- */
+  /* Substitute pairing, Bricolage Grotesque display over a
+     Figtree body. Both OFL — a stand-in for Proxima Nova, not the brand typeface.
+     Nothing outside these two lines changes with the pairing. */
+  --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-cjk: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+
+  /* Ladder is proportional to body, never a fixed print-memo table.
+     Emphasis comes from weight, never from shrinking everything around it. */
+  --body: 10pt;
+  --h1: calc(var(--body) * 2.7);
+  --h2: calc(var(--body) * 1.75);
+  --h3: calc(var(--body) * 1.2);
+  --caption: calc(var(--body) * 0.82);
+
+  --lh-tight: 1.05;
+  --lh-head: 1.18;
+  --lh-body: 1.5;
+
+  /* ---- Space ------------------------------------------------------------- */
+  --s1: 3pt;
+  --s2: 6pt;
+  --s3: 10pt;
+  --s4: 16pt;
+  --s5: 24pt;
+  --s6: 36pt;
+
+  /* ---- Page -------------------------------------------------------------- */
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --margin: 12mm;
+}

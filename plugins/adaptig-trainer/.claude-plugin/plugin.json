@@ -1,0 +1,8 @@
+{
+  "name": "adaptig-trainer",
+  "version": "1.0.0",
+  "description": "For Adaptig trainers: win a client, write the proposal, price and prepare a workshop, share it, and send feedback. Counts which commands you use so Adaptig can see what helps; switch it off any time.",
+  "author": { "name": "Adaptig" },
+  "homepage": "https://github.com/adaptig/trainer-plugin",
+  "repository": "https://github.com/adaptig/trainer-plugin"
+}

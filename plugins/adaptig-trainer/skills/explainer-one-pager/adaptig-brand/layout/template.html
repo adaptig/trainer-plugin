@@ -1,0 +1,92 @@
+<!doctype html>
+<!--
+  Adaptig one-pager skeleton. Copy this, fill the slots, delete what the document
+  does not need. The two versions the skill emits share this file — the sheet leans on
+  .matrix, the visual leans on <figure>.
+
+  Rules that are not negotiable, so they are marked inline:
+    - real logo and shape PNGs, never redrawn
+    - third-party marks from an allowlisted source, else the name in type
+    - charts and diagrams render from code, never image generation
+    - the output is exactly ONE A4 page
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="../adaptig-brand/fonts/fonts.css">
+<link rel="stylesheet" href="../adaptig-brand/tokens.css">
+<link rel="stylesheet" href="../adaptig-brand/layout/one-pager-a4.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- One shape, cropped on a CURVED edge. Punctuation, not decoration. -->
+  <img class="shape" src="../adaptig-brand/shapes/light-blue/quatrefoil.png"
+       style="width:74mm; top:-30mm; right:-28mm; opacity:.6;" alt="">
+
+  <header class="masthead">
+    <img class="logo" src="../adaptig-brand/logo/adaptig-wordmark.png" alt="Adaptig">
+    <div class="meta">
+      <strong>{{DOC_KIND}}</strong><br>
+      {{DATE_LONG}}<br>
+      {{SUBTITLE}}
+    </div>
+  </header>
+
+  <p class="eyebrow" style="margin-top:var(--s4)">{{EYEBROW}}</p>
+  <h1>{{HEADLINE}} <span class="accent">{{HEADLINE_ACCENT}}</span></h1>
+  <p class="standfirst">{{STANDFIRST}}</p>
+
+  <div class="cols cols-sidebar">
+    <div>
+      <h2>{{SECTION_1_TITLE}}</h2>
+      <p>{{SECTION_1_BODY}}</p>
+
+      <figure>
+        <!-- Inline SVG, generated from the content spine. Never a generated image. -->
+        {{FIGURE_SVG}}
+        <figcaption>{{FIGURE_CAPTION}}</figcaption>
+      </figure>
+    </div>
+    <div>
+      <div class="callout ink">
+        <h3 style="color:var(--paper-beige)">{{CALLOUT_1_TITLE}}</h3>
+        <p style="font-size:var(--caption); line-height:1.45">{{CALLOUT_1_BODY}}</p>
+      </div>
+      <div class="callout">
+        <h3>{{CALLOUT_2_TITLE}}</h3>
+        <p style="font-size:var(--caption); line-height:1.45">{{CALLOUT_2_BODY}}</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>{{MATRIX_TITLE}}</h2>
+  <table class="matrix">
+    <thead>
+      <tr><th style="width:31%">{{COL_1}}</th><th style="width:42%">{{COL_2}}</th>
+      <th style="width:27%">{{COL_3}}</th></tr>
+    </thead>
+    <tbody>
+      <!-- <tr><td class="term">…</td><td>…</td><td>…</td></tr> -->
+      {{MATRIX_ROWS}}
+    </tbody>
+  </table>
+
+  <!-- Optional. Marks resolve from an allowlisted source; unresolved ones carry the
+       class "unresolved" and show the brand NAME in type. -->
+  <h2>{{TOOLS_TITLE}}</h2>
+  <div class="toolrow">{{TOOL_MARKS}}</div>
+
+  <!-- Every figure the document states carries a named source and a date. -->
+  <div class="sources">
+    <ol>{{SOURCES}}</ol>
+  </div>
+
+  <div class="colophon">
+    <span>{{FOOTER_LEFT}}</span>
+    <span>{{FOOTER_RIGHT}}</span>
+  </div>
+</div>
+</body>
+</html>

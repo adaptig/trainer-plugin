@@ -1,0 +1,205 @@
+/* A4 one-pager layout. Self-contained: no CDN, no JS, no build step.
+   The user prints to PDF from their own browser (Cmd/Ctrl-P → Save as PDF,
+   margins: None, Background graphics: ON). Identical on macOS and Windows. */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #d9d4c7;               /* screen-only surround, never printed */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  position: relative;
+  width: var(--page-w);
+  min-height: var(--page-h);
+  margin: 10mm auto;
+  padding: var(--margin);
+  background: var(--paper-beige);
+  color: var(--charcoal-black);
+  font-family: var(--font-body);
+  font-size: var(--body);
+  line-height: var(--lh-body);
+  overflow: hidden;
+  box-shadow: 0 2mm 8mm rgba(0, 0, 0, 0.18);
+}
+
+@media print {
+  html, body { background: none; }
+  .page { margin: 0; box-shadow: none; page-break-after: always; }
+  /* Without this the trailing break manufactures a blank final page whenever the
+     content lands flush against 297mm — which is exactly what a one-pager does. */
+  .page:last-of-type { page-break-after: auto; }
+}
+
+/* ---- Masthead ----------------------------------------------------------- */
+.masthead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s4);
+  padding-bottom: var(--s3);
+  border-bottom: 1.5pt solid var(--charcoal-black);
+}
+.masthead .logo { height: 11mm; width: auto; }
+.masthead .meta {
+  text-align: right;
+  font-size: var(--caption);
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+.masthead .meta strong { color: var(--charcoal-black); font-weight: 700; }
+
+/* ---- Type --------------------------------------------------------------- */
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--h1);
+  line-height: var(--lh-tight);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: var(--s3) 0 var(--s3);
+  max-width: 22ch;
+}
+h1 .accent { color: var(--orange-peel); }
+
+.standfirst {
+  font-size: calc(var(--body) * 1.28);
+  line-height: 1.38;
+  color: var(--ink-soft);
+  max-width: 62ch;
+  margin: 0 0 var(--s3);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: var(--h2);
+  line-height: var(--lh-head);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: var(--s3) 0 var(--s2);
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: var(--h3);
+  line-height: var(--lh-head);
+  font-weight: 700;
+  margin: 0 0 var(--s2);
+}
+
+p { margin: 0 0 var(--s3); max-width: 74ch; }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--caption);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-peel);
+  margin: 0 0 var(--s2);
+}
+
+/* ---- Grid --------------------------------------------------------------- */
+.cols { display: grid; gap: var(--s4); }
+.cols-2 { grid-template-columns: 1fr 1fr; }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-sidebar { grid-template-columns: 1.55fr 1fr; }
+
+/* ---- Aligned matrix (the dense sheet's workhorse) ------------------------
+   Rows align on a shared baseline grid. Subheadings read LOUDER than body —
+   never a wall of same-size cards. */
+.matrix { width: 100%; border-collapse: collapse; }
+.matrix th {
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: var(--caption);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0 var(--s3) var(--s2) 0;
+  border-bottom: 1pt solid var(--charcoal-black);
+}
+.matrix td {
+  vertical-align: top;
+  padding: var(--s2) var(--s3) var(--s2) 0;
+  border-bottom: 0.75pt solid var(--rule);
+}
+.matrix td:last-child, .matrix th:last-child { padding-right: 0; }
+.matrix .term {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--h3);
+  line-height: 1.25;
+}
+
+/* ---- Callout ------------------------------------------------------------ */
+.callout {
+  background: var(--sky-blue);
+  padding: var(--s3);
+  margin: var(--s3) 0;
+}
+.callout.warm { background: var(--orange-peel); color: var(--paper-beige); }
+.callout.ink { background: var(--charcoal-black); color: var(--paper-beige); }
+.callout p:last-child { margin-bottom: 0; }
+
+/* ---- Tool row (real third-party logos, never drawn lookalikes) ----------- */
+.toolrow { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s4); align-items: center; }
+.setinType {
+  font-size: var(--caption);
+  line-height: 1.4;
+  color: var(--ink-soft);
+  margin: var(--s2) 0 0;
+  max-width: 78ch;
+}
+.tool { display: flex; align-items: center; gap: var(--s2); }
+.tool svg, .tool img { height: 5.5mm; width: auto; }
+.tool .name { font-weight: 600; font-size: var(--caption); }
+/* Fallback when a mark cannot be resolved from an allowlisted source:
+   the brand NAME set in type. Never an approximation of the mark. */
+.tool.unresolved .name { font-size: var(--body); font-weight: 700; }
+
+/* ---- Figures (charts/diagrams render from code, never image generation) -- */
+figure { margin: 0 0 var(--s3); }
+figure svg { width: 100%; height: auto; display: block; }
+figcaption {
+  font-size: var(--caption);
+  color: var(--ink-soft);
+  margin-top: var(--s1);
+  line-height: 1.35;
+}
+
+/* ---- Shapes ------------------------------------------------------------- */
+.shape { position: absolute; pointer-events: none; z-index: 0; }
+.page > *:not(.shape) { position: relative; z-index: 1; }
+
+/* ---- Sources + footer --------------------------------------------------- */
+.sources {
+  margin-top: var(--s5);
+  padding-top: var(--s3);
+  border-top: 0.75pt solid var(--rule);
+  font-size: var(--caption);
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+.sources ol { margin: 0; padding-left: 1.4em; }
+.sources li { margin-bottom: var(--s1); }
+
+.colophon {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s4);
+  margin-top: var(--s2);
+  padding-top: var(--s2);
+  font-size: var(--caption);
+  color: var(--ink-soft);
+}

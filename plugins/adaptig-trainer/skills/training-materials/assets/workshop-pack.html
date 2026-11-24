@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@@TITLE@@</title>
+<style id="adaptig-pack-styles">
+@@BRAND_STYLE@@
+#adaptig-workshop-pack{--paper:#f9f5ea;--paper:light-dark(#f9f5ea,#212124);--ink:#212124;--ink:light-dark(#212124,#f9f5ea);--orange:#fa5929;--blue:#0a66db;--blue:light-dark(#0a66db,#abc9f5);--panel:#fffdf7;--panel:light-dark(#fffdf7,#29292c);--muted:#65645f;--muted:light-dark(#65645f,#c1beb4);--line:rgba(33,33,36,.17);--line:light-dark(rgba(33,33,36,.17),rgba(249,245,234,.2));--soft:#eee9dd;--soft:light-dark(#eee9dd,#333336);--on-ink:#f9f5ea;box-sizing:border-box;background:var(--paper);color:var(--ink);font:16px/1.55 'AdaptigPackBody',system-ui,sans-serif;min-height:0;isolation:isolate;color-scheme:light dark;margin:0;padding:0;text-align:left}
+#adaptig-workshop-pack *,#adaptig-workshop-pack *::before,#adaptig-workshop-pack *::after{box-sizing:border-box}
+#adaptig-workshop-pack [hidden]{display:none!important}
+#adaptig-workshop-pack button,#adaptig-workshop-pack input{font:inherit}
+#adaptig-workshop-pack button:focus-visible,#adaptig-workshop-pack input:focus-visible,#adaptig-workshop-pack a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+#adaptig-workshop-pack h1,#adaptig-workshop-pack h2,#adaptig-workshop-pack h3,#adaptig-workshop-pack p{margin:0}
+#adaptig-workshop-pack h1,#adaptig-workshop-pack h2,#adaptig-workshop-pack h3{font-family:'AdaptigPackDisplay',system-ui,sans-serif;letter-spacing:-.035em;line-height:1.08;text-wrap:balance}
+#adaptig-workshop-pack h1{font-size:clamp(38px,5.8vw,72px);font-weight:760;max-width:14ch;white-space:pre-line}
+#adaptig-workshop-pack h2{font-size:clamp(27px,3.5vw,42px);font-weight:720}
+#adaptig-workshop-pack h3{font-size:23px;font-weight:680}
+#adaptig-workshop-pack p{max-width:68ch}
+#adaptig-workshop-pack .awp-shell{max-width:1240px;margin:auto;padding:0 40px}
+#adaptig-workshop-pack .awp-top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:23px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+#adaptig-workshop-pack .awp-brandplate{background:#f9f5ea;padding:7px 10px;display:flex;align-items:center;flex:0 0 auto;border-radius:4px}
+#adaptig-workshop-pack .awp-logo{width:84px;height:41px;object-fit:contain;display:block}
+#adaptig-workshop-pack .awp-context{min-width:0;flex:1}
+#adaptig-workshop-pack .awp-context-name{font-size:15px;font-weight:700;overflow-wrap:anywhere}
+#adaptig-workshop-pack .awp-context-label{font-size:12px;color:var(--muted);margin-top:2px;overflow-wrap:anywhere}
+#adaptig-workshop-pack .awp-edition{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:right;max-width:180px}
+#adaptig-workshop-pack .awp-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+#adaptig-workshop-pack .awp-tabs{display:flex;flex-wrap:wrap;gap:5px;min-width:0;padding:3px}
+#adaptig-workshop-pack .awp-tab{border:0;color:var(--muted);background:transparent;padding:10px 14px;border-radius:6px;white-space:nowrap;font-size:13px;font-weight:650}
+#adaptig-workshop-pack .awp-tab[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+#adaptig-workshop-pack .awp-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+#adaptig-workshop-pack .awp-button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;border-radius:6px;font-size:12px;font-weight:650;line-height:1.35}
+#adaptig-workshop-pack .awp-button:hover{background:var(--soft)}
+#adaptig-workshop-pack .awp-button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff;color:light-dark(#fff,#212124)}
+#adaptig-workshop-pack .awp-doc{padding-bottom:50px}
+#adaptig-workshop-pack .awp-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.75fr);gap:60px;padding:45px 0 40px;align-items:end}
+#adaptig-workshop-pack .awp-eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:750;color:var(--blue);margin-bottom:19px}
+#adaptig-workshop-pack .awp-subtitle{font-size:20px;line-height:1.45;color:var(--muted);margin-top:22px;max-width:43ch;text-wrap:pretty}
+#adaptig-workshop-pack .awp-hero-aside{border-left:2px solid var(--orange);padding:0 0 0 26px;margin-bottom:7px}
+#adaptig-workshop-pack .awp-hero-aside p{font-size:15px;color:var(--muted);line-height:1.6}
+#adaptig-workshop-pack .awp-hero-aside strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);margin-bottom:12px}
+#adaptig-workshop-pack .awp-flow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:24px;font-size:12px;font-weight:750;color:var(--ink)}
+#adaptig-workshop-pack .awp-flow span:not(.awp-arrow){padding:13px 9px;background:var(--soft);border-radius:4px;flex:1;text-align:center}
+#adaptig-workshop-pack .awp-arrow{color:var(--orange)}
+#adaptig-workshop-pack .awp-facts{display:grid;grid-template-columns:1.2fr 1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:38px}
+#adaptig-workshop-pack .awp-fact{padding:18px 24px;border-left:1px solid var(--line)}
+#adaptig-workshop-pack .awp-fact:first-child{padding-left:0;border-left:0}
+#adaptig-workshop-pack .awp-fact-label{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+#adaptig-workshop-pack .awp-fact-value{font-size:14px;font-weight:650;overflow-wrap:anywhere}
+#adaptig-workshop-pack .awp-section{padding:26px 0 30px;border-top:1px solid var(--line)}
+#adaptig-workshop-pack .awp-section-head{display:flex;align-items:baseline;gap:20px;margin-bottom:24px}
+#adaptig-workshop-pack .awp-number{font-size:12px;font-weight:700;color:var(--orange);min-width:22px}
+#adaptig-workshop-pack .awp-outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;list-style:none;padding:0;margin:0;counter-reset:outcomes}
+#adaptig-workshop-pack .awp-outcomes li{counter-increment:outcomes;padding-top:17px;border-top:2px solid var(--ink);font-size:16px;line-height:1.55}
+#adaptig-workshop-pack .awp-outcomes li::before{content:'0' counter(outcomes);display:block;font-family:'AdaptigPackDisplay',sans-serif;font-size:30px;line-height:1.1;color:var(--blue);margin-bottom:16px}
+#adaptig-workshop-pack .awp-agenda{display:grid;gap:0}
+#adaptig-workshop-pack .awp-agenda-row{display:grid;grid-template-columns:72px minmax(170px,.65fr) minmax(0,1.3fr);gap:18px;padding:17px 0;border-top:1px solid var(--line);align-items:start}
+#adaptig-workshop-pack .awp-agenda-row:first-child{border-top:0}
+#adaptig-workshop-pack .awp-time{font-size:12px;font-weight:750;color:var(--blue);white-space:nowrap;padding-top:3px}
+#adaptig-workshop-pack .awp-agenda-title{font-weight:700;line-height:1.4;font-size:15px}
+#adaptig-workshop-pack .awp-agenda-detail{font-size:14px;color:var(--muted);line-height:1.5}
+#adaptig-workshop-pack .awp-total{font-size:11px;color:var(--muted);margin-top:11px}
+#adaptig-workshop-pack .awp-exercise{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:16px}
+#adaptig-workshop-pack .awp-exercise-top{background:#212124;color:#f9f5ea;padding:30px 34px}
+#adaptig-workshop-pack .awp-exercise-top .awp-eyebrow{color:#abc9f5;margin-bottom:12px}
+#adaptig-workshop-pack .awp-exercise-top h2{font-size:34px;max-width:24ch}
+#adaptig-workshop-pack .awp-exercise-top p:last-child{color:#dedbd1;font-size:15px;margin-top:16px;max-width:72ch}
+#adaptig-workshop-pack .awp-exercise-body{padding:30px 34px}
+#adaptig-workshop-pack .awp-minihead{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:750;margin-bottom:13px;color:var(--muted)}
+#adaptig-workshop-pack .awp-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:14px;margin-bottom:29px}
+#adaptig-workshop-pack .awp-input{border:1px solid var(--line);border-radius:7px;padding:18px;background:var(--paper)}
+#adaptig-workshop-pack .awp-input-title{font-size:13px;font-weight:750;margin-bottom:8px}
+#adaptig-workshop-pack .awp-input-text{font-size:13px;color:var(--muted);white-space:pre-wrap;line-height:1.55;overflow-wrap:anywhere}
+#adaptig-workshop-pack .awp-task{font-size:17px;line-height:1.6;margin-bottom:25px;white-space:pre-wrap}
+#adaptig-workshop-pack .awp-prompt{border-left:3px solid var(--blue);background:var(--soft);padding:20px 22px;border-radius:0 6px 6px 0;white-space:pre-wrap;font:14px/1.65 'AdaptigPackBody',sans-serif;overflow-wrap:anywhere;margin:0 0 23px}
+#adaptig-workshop-pack .awp-answer{border-top:1px solid var(--line);padding-top:25px;margin-top:23px}
+#adaptig-workshop-pack .awp-answer-text{white-space:pre-wrap;font-size:15px;line-height:1.65;background:var(--paper);padding:20px;border-radius:7px;margin-bottom:22px;overflow-wrap:anywhere}
+#adaptig-workshop-pack .awp-checks{padding-left:22px;margin:0 0 22px;display:grid;gap:10px;font-size:14px}
+#adaptig-workshop-pack .awp-checks li::marker{color:var(--blue)}
+#adaptig-workshop-pack .awp-stretch{padding:19px 22px;border-left:3px solid var(--orange);background:var(--paper);font-size:14px;white-space:pre-wrap}
+#adaptig-workshop-pack .awp-facilitator-note{margin:20px 0 0;color:var(--muted);font-size:13px;white-space:pre-wrap}
+#adaptig-workshop-pack .awp-calculator{margin:24px 0;padding:23px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#adaptig-workshop-pack .awp-controls{display:flex;gap:18px;align-items:end;margin:18px 0;flex-wrap:wrap}
+#adaptig-workshop-pack .awp-field{display:flex;flex-direction:column;gap:7px;font-size:11px;font-weight:700;color:var(--muted)}
+#adaptig-workshop-pack .awp-field input{width:128px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:5px;padding:9px 12px;font-size:15px}
+#adaptig-workshop-pack .awp-table-wrap{overflow:auto}
+#adaptig-workshop-pack table{width:100%;border-collapse:collapse;text-align:left;font-size:13px;line-height:1.5}
+#adaptig-workshop-pack th{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:11px 13px;border-bottom:1px solid var(--ink)}
+#adaptig-workshop-pack td{padding:13px;border-bottom:1px solid var(--line);vertical-align:top}
+#adaptig-workshop-pack th:first-child,#adaptig-workshop-pack td:first-child{padding-left:0}
+#adaptig-workshop-pack .awp-cost{font-weight:750;white-space:nowrap}
+#adaptig-workshop-pack .awp-calc-note{font-size:11px;color:var(--muted);margin-top:13px}
+#adaptig-workshop-pack .awp-two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:38px}
+#adaptig-workshop-pack .awp-list{padding-left:21px;margin:0;display:grid;gap:12px;font-size:15px;line-height:1.55}
+#adaptig-workshop-pack .awp-list li::marker{color:var(--orange)}
+#adaptig-workshop-pack .awp-lede{font-size:20px;line-height:1.6;max-width:65ch;color:var(--muted)}
+#adaptig-workshop-pack .awp-programme{display:grid;gap:16px}
+#adaptig-workshop-pack .awp-module{display:grid;grid-template-columns:48px minmax(0,1fr) 130px;gap:20px;border:1px solid var(--line);padding:22px 24px;border-radius:7px;background:var(--panel)}
+#adaptig-workshop-pack .awp-module-n{font-family:'AdaptigPackDisplay',sans-serif;font-size:31px;color:var(--orange);line-height:1}
+#adaptig-workshop-pack .awp-module h3{font-size:21px}
+#adaptig-workshop-pack .awp-module p{margin-top:10px;font-size:14px;color:var(--muted)}
+#adaptig-workshop-pack .awp-module-duration{font-size:12px;text-align:right;color:var(--muted)}
+#adaptig-workshop-pack .awp-commercial{padding:24px 27px;background:var(--soft);border-radius:7px;margin-top:28px;white-space:pre-wrap;font-size:14px}
+#adaptig-workshop-pack .awp-next{border-top:3px solid var(--orange);margin-top:32px;padding-top:24px}
+#adaptig-workshop-pack .awp-next p{margin-top:13px;font-size:17px;line-height:1.6}
+#adaptig-workshop-pack .awp-one-hero{padding:48px 0 38px;border-bottom:2px solid var(--ink)}
+#adaptig-workshop-pack .awp-one-hero h1{max-width:19ch;font-size:clamp(38px,5.2vw,62px)}
+#adaptig-workshop-pack .awp-one-points{padding:10px 0 15px}
+#adaptig-workshop-pack .awp-point{display:grid;grid-template-columns:62px minmax(0,.6fr) minmax(0,1.3fr);gap:25px;padding:28px 0;border-bottom:1px solid var(--line)}
+#adaptig-workshop-pack .awp-point-n{font-family:'AdaptigPackDisplay',sans-serif;font-size:38px;line-height:1;color:var(--blue)}
+#adaptig-workshop-pack .awp-point h3{font-size:24px}
+#adaptig-workshop-pack .awp-point p{font-size:16px;color:var(--muted);line-height:1.6}
+#adaptig-workshop-pack .awp-takeaway{background:#212124;color:#f9f5ea;margin-top:28px;padding:28px 32px;border-radius:8px}
+#adaptig-workshop-pack .awp-takeaway .awp-minihead{color:#abc9f5}
+#adaptig-workshop-pack .awp-takeaway p:last-child{font-family:'AdaptigPackDisplay',sans-serif;font-size:clamp(23px,3vw,32px);line-height:1.25;letter-spacing:-.025em;max-width:44ch}
+#adaptig-workshop-pack .awp-social-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.85fr);gap:34px;margin:12px 0 30px;align-items:start}
+#adaptig-workshop-pack .awp-social-copy{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:30px}
+#adaptig-workshop-pack .awp-social-label{font-size:11px;color:var(--muted);padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:22px}
+#adaptig-workshop-pack .awp-social-post{white-space:pre-wrap;font-size:15px;line-height:1.75;overflow-wrap:anywhere}
+#adaptig-workshop-pack .awp-social-count{font-size:11px;color:var(--muted);margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+#adaptig-workshop-pack .awp-social-visual{background:#212124;color:#f9f5ea;padding:35px 30px;min-height:390px;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between}
+#adaptig-workshop-pack .awp-social-visual h2{font-size:clamp(34px,3.7vw,48px);line-height:1.12;max-width:13ch;white-space:pre-line;color:#f9f5ea}
+#adaptig-workshop-pack .awp-social-visual .awp-eyebrow{color:#abc9f5;margin-bottom:35px}
+#adaptig-workshop-pack .awp-social-rule{height:5px;width:63px;background:#fa5929;margin:24px 0}
+#adaptig-workshop-pack .awp-social-cta{font-size:13px;color:#dedbd1;margin-top:32px;line-height:1.55}
+#adaptig-workshop-pack .awp-social-note{font-size:11px;color:var(--muted);padding-top:15px}
+#adaptig-workshop-pack .awp-footer{border-top:1px solid var(--line);padding:22px 0 30px;display:flex;gap:20px;justify-content:space-between;align-items:start;color:var(--muted);font-size:10px;line-height:1.5}
+#adaptig-workshop-pack .awp-footer p{max-width:75ch}
+#adaptig-workshop-pack .awp-sources{padding:0;margin:8px 0 0;list-style:none;display:flex;gap:14px;flex-wrap:wrap}
+#adaptig-workshop-pack .awp-sources a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+#adaptig-workshop-pack .awp-message{font-size:12px;min-height:1.5em;margin-top:12px;color:var(--muted)}
+#adaptig-workshop-pack .awp-hero-aside p{white-space:pre-line}
+#adaptig-workshop-pack .awp-ahead{margin-top:34px;padding:24px 27px;border:1px dashed var(--line);border-radius:7px}
+#adaptig-workshop-pack .awp-ahead h2{font-size:22px;margin-bottom:14px}
+#adaptig-workshop-pack .awp-signature{margin-top:28px;font-size:15px;line-height:1.55}
+#adaptig-workshop-pack .awp-signature p{white-space:pre-line}
+#adaptig-workshop-pack .awp-sign-name{font-family:'AdaptigPackDisplay',sans-serif;font-size:21px;font-weight:700;letter-spacing:-.02em;margin-top:12px}
+#adaptig-workshop-pack .awp-sign-meta{color:var(--muted);font-size:14px}
+#adaptig-workshop-pack .awp-footer-sender{text-align:right}
+#adaptig-workshop-pack .awp-footer-sender p{white-space:pre-line}
+#adaptig-workshop-pack .awp-commercial p{white-space:pre-line}
+#adaptig-workshop-pack[data-single="true"] .awp-tabs{display:none}
+
+@media(max-width:800px){#adaptig-workshop-pack .awp-shell{padding-left:24px;padding-right:24px}#adaptig-workshop-pack .awp-hero{grid-template-columns:1fr;gap:26px;padding:34px 0}#adaptig-workshop-pack .awp-hero-aside{max-width:580px;padding-left:20px}#adaptig-workshop-pack .awp-flow{max-width:340px;margin-top:18px}#adaptig-workshop-pack .awp-outcomes{gap:20px}#adaptig-workshop-pack .awp-social-grid{grid-template-columns:1fr 1fr;gap:22px}#adaptig-workshop-pack .awp-social-copy{padding:23px}#adaptig-workshop-pack .awp-point{grid-template-columns:45px minmax(0,1fr);gap:18px}#adaptig-workshop-pack .awp-point p{grid-column:2}#adaptig-workshop-pack .awp-toolbar{align-items:flex-start;flex-wrap:wrap}#adaptig-workshop-pack .awp-actions{margin-left:auto}}
+@media(max-width:560px){#adaptig-workshop-pack .awp-shell{padding-left:18px;padding-right:18px}#adaptig-workshop-pack .awp-top{gap:14px;padding-top:17px;padding-bottom:17px}#adaptig-workshop-pack .awp-edition{display:none}#adaptig-workshop-pack .awp-logo{width:67px;height:34px}#adaptig-workshop-pack .awp-brandplate{padding:5px}#adaptig-workshop-pack .awp-context-name{font-size:13px}#adaptig-workshop-pack .awp-context-label{font-size:10px}#adaptig-workshop-pack .awp-toolbar{gap:11px;padding:13px 0}#adaptig-workshop-pack .awp-tabs{width:100%;gap:2px}#adaptig-workshop-pack .awp-tab{padding:9px 11px;font-size:12px}#adaptig-workshop-pack .awp-button{font-size:11px}#adaptig-workshop-pack .awp-status{font-size:10px}#adaptig-workshop-pack .awp-hero{gap:24px}#adaptig-workshop-pack h1{font-size:43px;max-width:14ch}#adaptig-workshop-pack .awp-subtitle{font-size:18px;margin-top:17px}#adaptig-workshop-pack .awp-facts{grid-template-columns:1fr;margin-bottom:25px}#adaptig-workshop-pack .awp-fact{padding:12px 0;border-left:0;border-top:1px solid var(--line)}#adaptig-workshop-pack .awp-fact:first-child{border-top:0}#adaptig-workshop-pack .awp-fact-label{display:inline-block;min-width:90px;margin:0}#adaptig-workshop-pack .awp-fact-value{font-size:13px}#adaptig-workshop-pack .awp-outcomes{grid-template-columns:1fr;gap:18px}#adaptig-workshop-pack .awp-outcomes li{display:grid;grid-template-columns:40px 1fr;gap:15px;padding-top:14px;font-size:15px}#adaptig-workshop-pack .awp-outcomes li::before{font-size:28px;margin:0}#adaptig-workshop-pack .awp-agenda-row{grid-template-columns:55px 1fr;gap:8px 15px;padding:16px 0}#adaptig-workshop-pack .awp-agenda-detail{grid-column:2}#adaptig-workshop-pack .awp-section-head{gap:11px;margin-bottom:19px}#adaptig-workshop-pack .awp-exercise-top,#adaptig-workshop-pack .awp-exercise-body{padding:23px 20px}#adaptig-workshop-pack .awp-exercise-top h2{font-size:29px}#adaptig-workshop-pack .awp-task{font-size:16px}#adaptig-workshop-pack .awp-prompt{padding:16px;font-size:13px}#adaptig-workshop-pack .awp-two-col,#adaptig-workshop-pack .awp-social-grid{grid-template-columns:1fr;gap:26px}#adaptig-workshop-pack .awp-module{grid-template-columns:35px 1fr;gap:10px 14px;padding:20px}#adaptig-workshop-pack .awp-module-duration{grid-column:2;text-align:left}#adaptig-workshop-pack .awp-point{padding:23px 0}#adaptig-workshop-pack .awp-point h3{font-size:22px}#adaptig-workshop-pack .awp-point p{font-size:15px}#adaptig-workshop-pack .awp-takeaway{padding:24px}#adaptig-workshop-pack .awp-social-visual{min-height:340px}#adaptig-workshop-pack .awp-social-visual h2{font-size:43px}#adaptig-workshop-pack .awp-footer{flex-direction:column;gap:10px}#adaptig-workshop-pack .awp-lede{font-size:18px}}
+@media print{#adaptig-workshop-pack .awp-ahead,#adaptig-workshop-pack .awp-next,#adaptig-workshop-pack .awp-signature{break-inside:avoid}}
+@media(max-width:560px){#adaptig-workshop-pack .awp-footer-sender{text-align:left}}
+@media(pointer:coarse){#adaptig-workshop-pack button{min-height:44px}#adaptig-workshop-pack input{min-height:44px;font-size:16px}}
+@media print{#adaptig-workshop-pack .awp-section-head,#adaptig-workshop-pack h2,#adaptig-workshop-pack h3{break-after:avoid}#adaptig-workshop-pack{--paper:#f9f5ea;--ink:#212124;--panel:#fffdf7;--muted:#65645f;--line:rgba(33,33,36,.17);--soft:#eee9dd;--blue:#0a66db;font-size:11pt;min-height:0;color-scheme:light;-webkit-print-color-adjust:exact;print-color-adjust:exact}#adaptig-workshop-pack .awp-shell{padding:0 12mm;max-width:none}#adaptig-workshop-pack .awp-toolbar,#adaptig-workshop-pack .awp-reveal,#adaptig-workshop-pack .awp-message{display:none!important}#adaptig-workshop-pack .awp-top{padding:7mm 0 5mm}#adaptig-workshop-pack .awp-hero{padding:8mm 0;gap:10mm;grid-template-columns:1.2fr .8fr}#adaptig-workshop-pack h1{font-size:37pt}#adaptig-workshop-pack h2{font-size:24pt}#adaptig-workshop-pack .awp-subtitle{font-size:13pt}#adaptig-workshop-pack .awp-section{padding:6mm 0}#adaptig-workshop-pack .awp-outcomes{grid-template-columns:repeat(3,1fr)}#adaptig-workshop-pack .awp-outcomes li{font-size:10pt;display:block}#adaptig-workshop-pack .awp-facts{grid-template-columns:repeat(3,1fr);margin-bottom:6mm}#adaptig-workshop-pack .awp-fact{padding:4mm;border-left:1px solid var(--line);border-top:0}#adaptig-workshop-pack .awp-fact:first-child{padding-left:0;border-left:0}#adaptig-workshop-pack .awp-fact-label{display:block}#adaptig-workshop-pack .awp-agenda-row,#adaptig-workshop-pack .awp-input,#adaptig-workshop-pack .awp-point,#adaptig-workshop-pack .awp-module,#adaptig-workshop-pack .awp-takeaway{break-inside:avoid}#adaptig-workshop-pack .awp-exercise{break-inside:auto}#adaptig-workshop-pack .awp-exercise-top{break-after:avoid}#adaptig-workshop-pack .awp-exercise-top,#adaptig-workshop-pack .awp-exercise-body{padding:6mm}#adaptig-workshop-pack .awp-footer{font-size:8pt;padding:4mm 0}#adaptig-workshop-pack .awp-one-hero{padding:8mm 0 6mm}#adaptig-workshop-pack .awp-point{padding:6mm 0}#adaptig-workshop-pack .awp-one-points{padding-bottom:0}#adaptig-workshop-pack[data-document="one-pager"] .awp-point{grid-template-columns:12mm 43mm minmax(0,1fr);gap:5mm;padding:5mm 0}#adaptig-workshop-pack[data-document="one-pager"] .awp-point p{grid-column:auto;font-size:10pt}#adaptig-workshop-pack[data-document="one-pager"] .awp-point h3{font-size:16pt}#adaptig-workshop-pack[data-document="one-pager"] .awp-one-hero h1{font-size:32pt}#adaptig-workshop-pack[data-document="one-pager"] .awp-takeaway p:last-child{font-size:18pt}#adaptig-workshop-pack .awp-social-grid{grid-template-columns:1.2fr .8fr}#adaptig-workshop-pack a{color:var(--ink)}}
+</style>
+</head>
+<body>
+<div id="adaptig-workshop-pack" data-default="@@DEFAULT_DOC@@" data-single="@@SINGLE_DOCUMENT@@" role="region" aria-label="Workshop documents">
+  <div class="awp-shell">
+    <header class="awp-top">
+      <div class="awp-brandplate"><img class="awp-logo" src="@@WORDMARK_DATA@@" alt="Adaptig" width="84" height="41"></div>
+      <div class="awp-context"><p class="awp-context-name" data-fill="company"></p><p class="awp-context-label" data-fill="label"></p></div>
+      <p class="awp-edition" data-fill="date"></p>
+    </header>
+    <div class="awp-toolbar">
+      <nav class="awp-tabs" role="tablist" aria-label="Choose a document"></nav>
+      <div class="awp-actions">
+        <button class="awp-button cursor-interaction" type="button" data-action="facilitator" aria-pressed="false">Facilitator view</button>
+        <button class="awp-button cursor-interaction" type="button" data-action="print">Print document</button>
+      </div>
+    </div>
+        <main class="awp-doc-stage"></main>
+    <footer class="awp-footer"><div><p data-footer-note hidden></p><ul class="awp-sources"></ul></div><div class="awp-footer-sender"><p data-sender hidden></p><p data-brand-note hidden></p></div></footer>
+  </div>
+  <script type="application/json" id="adaptig-pack-data">@@PACK_DATA@@</script>
+  <noscript>Open this file in a web browser with JavaScript turned on to see the document.</noscript>
+</div>
+<script id="adaptig-pack-script">
+(function(){
+'use strict';
+const root=document.getElementById('adaptig-workshop-pack');
+if(!root||root.dataset.initialized==='true')return;
+root.dataset.initialized='true';
+const data=JSON.parse(root.querySelector('#adaptig-pack-data').textContent);
+const stage=root.querySelector('.awp-doc-stage');
+const nav=root.querySelector('.awp-tabs');
+const modeButton=root.querySelector('[data-action="facilitator"]');
+let facilitator=false;
+let answerRevealed=false;
+const docs={};
+const tabs={};
+const docNames={'workshop':'Workshop','proposal':'Proposal','one-pager':'One-pager','linkedin':'LinkedIn post'};
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined&&text!==null)n.textContent=String(text);return n;}
+function put(parent,tag,cls,text){const n=el(tag,cls,text);parent.appendChild(n);return n;}
+function list(parent,items,cls='awp-list',tag='ul'){const n=put(parent,tag,cls);items.forEach(item=>put(n,'li','',item));return n;}
+function mini(parent,text){return put(parent,'p','awp-minihead',text);}
+function section(parent,num,title){const n=put(parent,'section','awp-section');const h=put(n,'div','awp-section-head');put(h,'span','awp-number',num);put(h,'h2','',title);return n;}
+function hero(parent,eyebrow,title,subtitle,aside){const h=put(parent,'div','awp-hero');const left=put(h,'div','');put(left,'p','awp-eyebrow',eyebrow);put(left,'h1','',title);put(left,'p','awp-subtitle',subtitle);if(aside){const right=put(h,'aside','awp-hero-aside');put(right,'strong','',aside.title);put(right,'p','',aside.text);if(aside.flow){const flow=put(right,'div','awp-flow');['Inputs','Draft','Check'].forEach((text,i)=>{if(i)put(flow,'span','awp-arrow','→');put(flow,'span','',text);});}}return h;}
+function newDoc(id){const n=put(stage,'article','awp-doc');n.id='awp-document-'+id;n.setAttribute('role','tabpanel');n.setAttribute('aria-labelledby','awp-tab-'+id);docs[id]=n;const b=put(nav,'button','awp-tab cursor-interaction',docNames[id]);b.type='button';b.id='awp-tab-'+id;b.setAttribute('role','tab');b.setAttribute('aria-controls',n.id);b.addEventListener('click',()=>selectDoc(id));tabs[id]=b;return n;}
+function selectDoc(id){if(!docs[id])id=Object.keys(docs)[0];Object.keys(docs).forEach(key=>{const active=key===id;docs[key].hidden=!active;tabs[key].setAttribute('aria-selected',String(active));});root.dataset.document=id;modeButton.hidden=id!=='workshop';document.title=data.company+' · '+docNames[id];}
+function updateAnswer(){const answer=root.querySelector('[data-answer]');const reveal=root.querySelector('[data-action="reveal"]');if(!answer)return;answer.hidden=!(facilitator||answerRevealed);if(reveal){reveal.textContent=answerRevealed?'Hide sample answer':'Reveal sample answer';reveal.setAttribute('aria-expanded',String(!answer.hidden));reveal.hidden=facilitator;}}
+function calculator(parent,ex){if(!ex.supplierQuotes||!ex.supplierQuotes.length)return;const box=put(parent,'section','awp-calculator');mini(box,'Explore the supplied figures');put(box,'h3','','Compare known costs');const controls=put(box,'div','awp-controls');const inputs={};for(const [key,label] of [['seats','Seats'],['months','Months']]){const field=put(controls,'label','awp-field',label);const input=put(field,'input','');input.type='number';input.min='1';input.step='1';input.inputMode='numeric';input.value=ex[key]===undefined||ex[key]===null?'':String(ex[key]);input.placeholder='Not supplied';inputs[key]=input;}
+const wrap=put(box,'div','awp-table-wrap');const table=put(wrap,'table','');const head=put(table,'thead','');const row=put(head,'tr','');['Supplier','Monthly / seat','Setup','Support / period','Known subtotal'].forEach(x=>put(row,'th','',x));const body=put(table,'tbody','');const note=put(box,'p','awp-calc-note');note.setAttribute('aria-live','polite');const currency=ex.currency||'cost units';const format=new Intl.NumberFormat(undefined,{maximumFractionDigits:2});function update(){const seats=Number(inputs.seats.value),months=Number(inputs.months.value);const ready=inputs.seats.value!==''&&inputs.months.value!==''&&Number.isSafeInteger(seats)&&Number.isSafeInteger(months)&&seats>0&&months>0;body.replaceChildren();ex.supplierQuotes.forEach(q=>{const r=put(body,'tr','');put(r,'td','',q.id);put(r,'td','',format.format(q.monthly));put(r,'td','',format.format(q.setup));put(r,'td','',q.support===null?'Not supplied':format.format(q.support));const subtotal=ready?q.monthly*seats*months+q.setup+(q.support===null?0:q.support):null;put(r,'td','awp-cost',subtotal===null?'Add seats + months':format.format(subtotal)+(q.support===null?' + unknown support':''));});note.textContent=ready?'Known subtotal = monthly × seats × months + setup + known support, in '+currency+'. Unknown support stays unknown. This comparison does not establish complete cost or a supplier recommendation.':'Enter positive whole numbers for seats and months. Supplied costs are in '+currency+'; missing support is not zero.';}
+inputs.seats.addEventListener('input',update);inputs.months.addEventListener('input',update);update();}
+function workshop(){const p=newDoc('workshop');hero(p,'Workshop',data.title,data.subtitle,{title:'The work, made practical',text:'Use the supplied inputs. Build something useful. Check the result before it leaves the room.',flow:true});const facts=put(p,'div','awp-facts');for(const [label,key]of [['Audience','audience'],['Time','duration'],['Group','participants']]){const f=put(facts,'div','awp-fact');put(f,'span','awp-fact-label',label);put(f,'span','awp-fact-value',data[key]);}const outcomes=section(p,'01','What you will practise');list(outcomes,data.learningOutcomes,'awp-outcomes','ol');const agenda=section(p,'02','The session at a glance');const rows=put(agenda,'div','awp-agenda');let elapsed=0;data.timeline.forEach(block=>{const r=put(rows,'div','awp-agenda-row');put(r,'span','awp-time',String(block.minutes)+' min');put(r,'p','awp-agenda-title',block.title);put(r,'p','awp-agenda-detail',block.activity);elapsed+=block.minutes;});put(agenda,'p','awp-total','Agenda total: '+elapsed+' minutes · '+data.duration);const ex=data.exercise;const card=put(p,'section','awp-exercise');const top=put(card,'header','awp-exercise-top');put(top,'p','awp-eyebrow','Practice lab / work with the evidence');put(top,'h2','',ex.title);put(top,'p','',ex.brief);const body=put(card,'div','awp-exercise-body');mini(body,'Your inputs');const inputs=put(body,'div','awp-inputs');ex.inputs.forEach(item=>{const c=put(inputs,'div','awp-input');put(c,'p','awp-input-title',item.label);put(c,'p','awp-input-text',item.text);});mini(body,'Your task');put(body,'p','awp-task',ex.task);calculator(body,ex);mini(body,'A prompt to adapt');put(body,'div','awp-prompt',ex.prompt);const reveal=put(body,'button','awp-button awp-reveal cursor-interaction','Reveal sample answer');reveal.type='button';reveal.dataset.action='reveal';reveal.setAttribute('aria-controls','awp-sample-answer');reveal.setAttribute('aria-expanded','false');reveal.addEventListener('click',()=>{answerRevealed=!answerRevealed;updateAnswer();});const answer=put(body,'section','awp-answer');answer.id='awp-sample-answer';answer.dataset.answer='true';answer.hidden=true;mini(answer,'Sample answer / one possible response');put(answer,'div','awp-answer-text',ex.modelAnswer);const criteria=put(body,'section','awp-answer');mini(criteria,'What to check');list(criteria,ex.checks,'awp-checks','ol');mini(criteria,'Go one step further');put(criteria,'p','awp-stretch',ex.stretch);if(ex.facilitatorNote)put(answer,'p','awp-facilitator-note',ex.facilitatorNote);}
+function proposal(){const d=data.proposal,p=newDoc('proposal');const from=data.preparedBy?{title:'Prepared by',text:[data.preparedBy,data.date].filter(Boolean).join('\n')}:null;hero(p,d.eyebrow||'Workshop proposal',d.title,d.subtitle,from);const problem=section(p,'01','The opportunity');put(problem,'p','awp-lede',d.problem);const objectives=section(p,'02','What the workshop should change');list(objectives,d.objectives,'awp-outcomes','ol');const programme=section(p,'03','A practical programme');const modules=put(programme,'div','awp-programme');d.programme.forEach((item,i)=>{const m=put(modules,'div','awp-module');put(m,'span','awp-module-n',String(i+1).padStart(2,'0'));const text=put(m,'div','');put(text,'h3','',item.title);put(text,'p','',item.output);put(m,'span','awp-module-duration',item.duration);});const included=section(p,'04','What is included');const cols=put(included,'div','awp-two-col');const deliver=put(cols,'div','');mini(deliver,'You leave with');list(deliver,d.deliverables);const needed=put(cols,'div','');mini(needed,'To shape it together');list(needed,d.clientInputs);if(d.commercial)commercial(included,d.commercial);if(d.commercialNote){const commercialBox=put(included,'div','awp-commercial');mini(commercialBox,'Price and terms');put(commercialBox,'p','',d.commercialNote);}if(d.possibleNextSteps){const ahead=put(p,'section','awp-ahead');put(ahead,'h2','','Possible next steps');list(ahead,d.possibleNextSteps);}const next=put(p,'section','awp-next');put(next,'h2','','The next conversation');put(next,'p','',d.nextStep);signature(next,d.signOff);}
+function signature(parent,signOff){if(!data.preparedBy)return;const s=put(parent,'div','awp-signature');if(signOff)put(s,'p','',signOff);put(s,'p','awp-sign-name',data.preparedBy);if(data.role)put(s,'p','awp-sign-meta',data.role);if(data.contact)put(s,'p','awp-sign-meta',data.contact);if(data.date)put(s,'p','awp-sign-meta',data.date);}
+function commercial(parent,d){const box=put(parent,'div','awp-calculator');mini(box,d.label||'Investment');const wrap=put(box,'div','awp-table-wrap');const t=put(wrap,'table','');const head=put(put(t,'thead',''),'tr','');['Item','Quantity','Unit price','Amount'].forEach(x=>put(head,'th','',x));const body=put(t,'tbody','');const fmt=new Intl.NumberFormat(undefined,{maximumFractionDigits:2});const number=v=>v===null||v===undefined?'':fmt.format(v);d.rows.forEach(item=>{const row=put(body,'tr','');put(row,'td','',item.item);put(row,'td','',number(item.quantity));put(row,'td','',number(item.unitPrice));put(row,'td','awp-cost',number(item.total));});put(box,'p','awp-calc-note','All amounts in '+d.currency+'.');if(d.terms)put(box,'p','awp-calc-note',d.terms);if(d.validUntil)put(box,'p','awp-calc-note','Valid until: '+d.validUntil);}
+function onePager(){const d=data.onePager,p=newDoc('one-pager');const h=put(p,'header','awp-one-hero');put(h,'p','awp-eyebrow','One-page brief');put(h,'h1','',d.title);put(h,'p','awp-subtitle',d.subtitle);const points=put(p,'div','awp-one-points');d.points.forEach((item,i)=>{const row=put(points,'section','awp-point');put(row,'span','awp-point-n',String(i+1).padStart(2,'0'));put(row,'h3','',item.title);put(row,'p','',item.text);});const takeaway=put(p,'aside','awp-takeaway');mini(takeaway,'Take this with you');put(takeaway,'p','',d.takeaway);}
+function linkedin(){const d=data.linkedin,p=newDoc('linkedin');hero(p,'LinkedIn post','A useful idea.\nIn your own voice.',d.label);const grid=put(p,'div','awp-social-grid');const copy=put(grid,'section','awp-social-copy');put(copy,'p','awp-social-label',d.label);put(copy,'div','awp-social-post',d.post);put(copy,'p','awp-social-count',d.post.length+' characters · not posted');const aside=put(grid,'aside','');const visual=put(aside,'div','awp-social-visual');const content=put(visual,'div','');put(content,'p','awp-eyebrow','Adaptig / practical AI');put(content,'h2','',d.visualHeadline);put(content,'div','awp-social-rule');put(visual,'p','awp-social-cta',d.cta);put(aside,'p','awp-social-note','Suggested companion visual');}
+root.querySelectorAll('[data-fill]').forEach(n=>{n.textContent=data[n.dataset.fill]||'';n.hidden=!data[n.dataset.fill];});
+const hasWorkshop=!!(data.exercise&&data.timeline&&data.learningOutcomes);
+if(hasWorkshop)workshop();if(data.proposal)proposal();if(data.onePager)onePager();if(data.linkedin)linkedin();
+modeButton.addEventListener('click',()=>{facilitator=!facilitator;modeButton.setAttribute('aria-pressed',String(facilitator));modeButton.textContent=facilitator?'Learner view':'Facilitator view';updateAnswer();});
+root.querySelector('[data-action="print"]').addEventListener('click',()=>window.print());
+nav.addEventListener('keydown',event=>{const keys=Object.keys(tabs);let i=keys.indexOf(root.dataset.document);if(event.key==='ArrowRight')i=(i+1)%keys.length;else if(event.key==='ArrowLeft')i=(i-1+keys.length)%keys.length;else if(event.key==='Home')i=0;else if(event.key==='End')i=keys.length-1;else return;event.preventDefault();selectDoc(keys[i]);tabs[keys[i]].focus();});
+function footerLine(selector,text){const n=root.querySelector(selector);if(text){n.textContent=text;n.hidden=false;}}
+footerLine('[data-footer-note]',data.sourceNote);
+footerLine('[data-sender]',[data.preparedBy?data.preparedBy+(data.role?', '+data.role:''):'',data.contact,data.date].filter(Boolean).join(' · '));
+footerLine('[data-brand-note]',data.brandNote);
+if(data.sources){const sourceList=root.querySelector('.awp-sources');data.sources.forEach(source=>{const item=put(sourceList,'li','');if(/^https?:\/\/[^\s]+$/i.test(source.url)){const a=put(item,'a','',source.title);a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';}else put(item,'span','',source.title);});}
+selectDoc(root.dataset.default);updateAnswer();
+})();
+</script>
+</body>
+</html>

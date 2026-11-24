@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "UserPromptExpansion": [
+      {
+        "matcher": "^adaptig-trainer:",
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/count-use.sh\"", "async": true, "timeout": 10 }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^Skill$",
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/count-use.sh\"", "async": true, "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}

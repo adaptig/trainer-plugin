@@ -1,0 +1,16 @@
+{
+  "name": "adaptig",
+  "owner": { "name": "Adaptig" },
+  "metadata": {
+    "description": "Adaptig's Claude plugin for independent Adaptig trainers."
+  },
+  "plugins": [
+    {
+      "name": "adaptig-trainer",
+      "source": "./plugins/adaptig-trainer",
+      "description": "Win clients, write proposals, price and prepare workshops and share them, in six commands.",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}
