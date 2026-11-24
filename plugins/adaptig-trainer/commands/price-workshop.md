@@ -9,4 +9,4 @@ Use the `adaptig-trainer:pricing-explainer` skill. If they gave a price and a nu
 
 The price is the trainer's own; never choose it for them. A fee they pay Adaptig never goes into anything a client reads.
 
-When they have settled a price for a real client, offer once: "Want the proposal drafted with that price? Run /adaptig-trainer:win-client."
+When they have settled a price for a real client, offer once: "Want the proposal drafted with that price? Run /adaptig-trainer:proposal."

@@ -80,7 +80,7 @@ attached in this conversation; otherwise name it as another
 skill in this plugin:
 
 - They have settled a price for a real client: "Want the proposal drafted with that
-  price?" (`workshop-proposal`)
+  price?" (`/adaptig-trainer:proposal`)
 - They are still looking for the client: "Want the message that gets you the meeting?"
   (`warm-outreach`)
 
