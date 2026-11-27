@@ -8,8 +8,8 @@
     {
       "name": "adaptig-trainer",
       "source": "./plugins/adaptig-trainer",
-      "description": "Win clients, write proposals, price and prepare workshops and share them, in six commands.",
-      "version": "1.0.0",
+      "description": "Seven steps from winning a client to sharing the workshop: outreach, price, proposal, agenda, preparation, a post with an image, and feedback.",
+      "version": "1.1.0",
       "category": "productivity"
     }
   ]

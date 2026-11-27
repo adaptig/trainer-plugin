@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   department: "marketing"
   author: "Adaptig"
-  version: "0.6.0"
+  version: "0.6.1"
   related: ["brand-voice", "workshop-proposal", "explainer-one-pager"]
 ---
 
@@ -87,7 +87,7 @@ or to message strangers in bulk: decline that part, and offer the warm version.
 
 ## Language
 
-Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes.
+Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes. [languages.md](../brand-voice/references/languages.md) says how to choose it, how to write Traditional Chinese (Hong Kong), and how to set the language of a file.
 
 
 ## Self-Improvement Loop

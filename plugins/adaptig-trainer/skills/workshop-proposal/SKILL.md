@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   department: "marketing"
   author: "Adaptig"
-  version: "0.6.0"
+  version: "0.7.0"
   related: ["brand-voice", "branding-guidelines", "training-materials", "pricing-explainer", "explainer-one-pager"]
 ---
 
@@ -17,7 +17,7 @@ Turn one client's discovery brief into a concrete, designed training proposal th
 
 Give the trainer a usable proposal in the conversation first: the full client-facing text, ready to paste into an email or a document. Render the designed file after that, when file tools exist. A trainer in a chat app must never wait on a renderer to read their own proposal.
 
-The trainer is independent and sets their own price. When the brief holds no fee, do not hold the proposal back: give the full proposal text without the investment section, and end that same reply with the one question, "What is your fee for this, and in which currency?" Their answer is the price; add the investment section and send the finished text. Do not ask who approved it. In that same question, and only when the brief lacks them, ask for the other things the client copy needs: whether tax is added on top of the fee, and what goes in the signature (the name that signs, their role, the contact details to show, and the date to put on the proposal). Ask once; never print a placeholder. The client copy never carries a bracketed gap; a missing detail is left out and listed for the trainer in chat.
+The trainer is independent and sets their own price. When the brief holds no fee, do not hold the proposal back: give the full proposal text without the investment section, and end that same reply with the one question, "What is your fee for this, and in which currency?" Their answer is the price; add the investment section and send the finished text. Do not ask who approved it. The signature (the name that signs, their role and the contact details to show) comes from the trainer's saved details: read [trainer-details.md](../brand-voice/references/trainer-details.md) and the file it names before you ask anything. In that same question, and only when they are missing, ask for the details that are not saved, and whether tax is added on top of the fee. The date on the proposal is today's unless the trainer gives another. Ask once; save the details they give; never print a placeholder. The client copy never carries a bracketed gap; a missing detail is left out and listed for the trainer in chat.
 
 ## Input and output
 
@@ -127,7 +127,7 @@ Keep every required proposal section visible. Use the schema's structured `propo
 
 Use a clear cover/title, a short client-specific context, distinct outcome/programme blocks, tangible exercise/material deliverables, a readable delivery/responsibility section and one clear next decision. Include a separate investment table only when authorised inputs support it. An unpriced proposal can still be professionally designed: say in one plain client sentence that the price follows once the scope is agreed, with no status label. Keep private drafting context, calculation workings, status and approval questions in the chat reply, outside the client document.
 
-The proposal shows who sends it and when. Fill `preparedBy` (the name that signs), `role`, `contact` and `date` from the trainer's answers, and `proposal.signOff` with a closing line in the client's language. The renderer prints the name and date beside the title, a signature block after the next step and a sender line in the footer, and refuses a proposal without a name and date. Do not repeat the name in `nextStep`. If the trainer has not given these, ask once in chat; never print placeholder text.
+The proposal shows who sends it and when. Fill `preparedBy` (the name that signs), `role` and `contact` from the trainer's saved details or answers, `date` with the proposal date, `lang` with the client document's language tag (`en`, `zh-Hant-HK`…), and `proposal.signOff` with a closing line in the client's language. The renderer prints the name and date beside the title, a signature block after the next step and a sender line in the footer, and refuses a proposal without a name and date. Do not repeat the name in `nextStep`. If they are neither saved nor given, ask once, at the end of the reply that carries the proposal text; never print placeholder text.
 
 Open the actual artifact and show it through the host's preview surface when available. Inspect every page/view for readable type, whitespace, coherent hierarchy, clipped content, table overflow and broken assets; check print layout when a printable document is requested. Fix visible issues before handover. When PDF is requested and export tools exist, create and inspect the PDF too. Do not call HTML a PDF or a slide outline a deck.
 
@@ -175,7 +175,7 @@ No browsing: use supplied evidence and omit unchecked public claims. No authoris
 
 ## Language
 
-Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes.
+Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes. [languages.md](../brand-voice/references/languages.md) says how to choose it, how to write Traditional Chinese (Hong Kong), and how to set the language of a file.
 
 
 ## Self-Improvement Loop

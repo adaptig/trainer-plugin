@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   department: "delivery"
   author: "Adaptig"
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Training materials
@@ -23,7 +23,9 @@ Read the supplied plan, approved source deck/exercises and readiness notes. Reco
 
 Infer the required artifacts from the request: worksheet, exercise pack, workshop preview, facilitator notes, one-page handout or a complete pack. Ask only if the choice materially changes the work. Use the trainer's existing presentation format if supplied and supported by the host; otherwise use the bundled visual HTML route. Produce a storyboard only when it is requested or useful as an intermediate production plan. Do not force a slide deck where a worksheet is enough.
 
-Reuse source approval and artifact instructions already established for this version. Creating a local preview from an authorised brief is part of the requested work; do not stop to ask whether to render it. Missing commercial approval does not block designing supported learning materials. Tell the trainer in chat which content is proposed or not yet checked against approved curriculum, and continue the useful draft.
+**Quick version first, when asked for.** When the request or the `prep-workshop` command asks for a quick version, give only this, in the chat, on one screen: the timed plan as a table (minutes, block, what participants do, with the total), each exercise in one line, and the three things to check before the day. Then ask once whether to build the full pack, and stop. It takes a minute instead of ten, and the trainer corrects the plan before the materials are built on it. Everything below applies once the full pack is requested.
+
+Reuse source approval and artifact instructions already established for this version. Once the full pack is requested, creating a local preview from an authorised brief is part of the work; do not stop to ask again whether to render it. Missing commercial approval does not block designing supported learning materials. Tell the trainer in chat which content is proposed or not yet checked against approved curriculum, and continue the useful draft.
 
 If approved content is missing, build only the parts supported by the brief, using synthetic inputs, and tell the trainer in chat that it is draft material not checked against approved curriculum, with a source gap list. Do not invent official module content, required products, prices or certification language. Source files may come from the trainer's authorized access; do not request internal company systems or share-platform credentials.
 
@@ -90,7 +92,7 @@ For a starter exercise that can be adapted, read [the synthetic staff-message ex
 
 ## Render the visual artifact
 
-Use host-native document/slide creation when it supports the requested editable format. Otherwise read [the artifact schema](references/artifact-schema.md), populate a task-specific JSON file and run the bundled [pack renderer](tools/render_pack.py). It creates self-contained HTML with bundled visual tokens; it does not require another repository or an external brand service. Follow the schema's actual command and required fields.
+Use host-native document/slide creation when it supports the requested editable format. Otherwise read [the artifact schema](references/artifact-schema.md), populate a task-specific JSON file and run the bundled [pack renderer](tools/render_pack.py). Set `lang` to the client's language tag, and take `preparedBy`, `role` and `contact` from the trainer's saved details ([trainer-details.md](../brand-voice/references/trainer-details.md)) without asking again. It creates self-contained HTML with bundled visual tokens; it does not require another repository or an external brand service. Follow the schema's actual command and required fields.
 
 The renderer creates `index.html` plus the supported document files for supplied content: `workshop.html`, `proposal.html`, `one-pager.html` and `linkedin.html`. Follow the schema's document-selection rules and supply only the requested content; do not invent unrelated material to create extra tabs. It rejects unsupported JSON fields. Extend the generated HTML or use a suitable native layout when the requested content exceeds the schema; adding an unsupported field cannot make that content appear.
 
@@ -126,7 +128,7 @@ No approved curriculum: produce the material from the brief and list the source 
 
 ## Language
 
-Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes.
+Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes. [languages.md](../brand-voice/references/languages.md) says how to choose it, how to write Traditional Chinese (Hong Kong), and how to set the language of a file.
 
 
 ## Self-Improvement Loop

@@ -4,7 +4,7 @@ description: "Send feedback, a problem or an idea about the Adaptig trainer plug
 license: "MIT"
 metadata:
   author: "Adaptig"
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Trainer feedback
@@ -13,7 +13,7 @@ Get the trainer's feedback to Adaptig in one short message, with nothing private
 
 ## 1. Capture
 
-Use the trainer's own words: what they were doing, what happened or what they would change, and which command or skill it was about. If the core is missing, ask one question: "What happened, or what would you like to improve?" Do not run a questionnaire.
+Use the trainer's own words: what they were doing, what happened or what they would change, and which commands or skills it was about. A note can be about several; keep every one it names. If the core is missing, ask one question: "What happened, or what would you like to improve?" Do not run a questionnaire.
 
 ## 2. Clean it
 
@@ -31,7 +31,7 @@ curl -s -m 15 -X POST "https://ymahkihjsjukzvdinoca.supabase.co/functions/v1/tra
   --data-binary @feedback.json
 ```
 
-Write `feedback.json` first with a JSON encoder, never by pasting text into the command: `{"message": "<the message, 10 to 4000 characters>", "skill": "<command or skill name, or null>", "pack_version": "1.0.0"}`. Delete the file after sending.
+Write `feedback.json` first with a JSON encoder, never by pasting text into the command: `{"message": "<the message, 10 to 4000 characters>", "skill": "<the command or skill names it is about, comma-separated and without the adaptig-trainer: prefix, for example \"proposal, share-workshop\"; at most 80 characters; or null>", "pack_version": "1.1.0"}`. Delete the file after sending.
 
 - `{"ok":true}` means Adaptig has it. Say "Sent to Adaptig." It is anonymous, so Adaptig cannot reply.
 - Anything else, or no answer: say it did not go through, and give the trainer the two routes below.

@@ -5,7 +5,7 @@ license: "MIT"
 metadata:
   department: "marketing"
   author: "Adaptig"
-  version: "1.0.0"
+  version: "1.1.0"
   related: ["workshop-proposal", "warm-outreach"]
   source: "Trainer fees and guidance as told to trainers in the trainer agreement, trainer decks and trainer calls of 2026"
 ---
@@ -27,25 +27,40 @@ as not settled.
 |---|---|
 | "How does pricing work?", "explain Spark pricing" | **The picture.** Three lines: the client pays you your price; you pay Adaptig a fee (a seat per participant for Spark, a fee per session for Shift and Shape); the difference is yours. Then one worked example with round numbers. |
 | "What do I pay Adaptig for 18 people?" | **The fee.** The seat sum for that class, shown step by step, with the free seats they say they have. |
-| "I'm charging 6,000 for 25 people, what do I keep?" | **The margin.** The table below, with their numbers. |
+| "I'm charging 6,000 for 25 people, what do I keep?" | **The margin.** The two tables below, with their numbers. |
 | "What should I charge?" | **The guidance, then a question.** Adaptig's guidance range and its date, then ask what the result is worth to this client. Never pick the price for them. |
 | "Is it worth it for 8 people?", "small client" | **The break-even.** The fee for that size, what is left at their price, and the cheaper route when there is one (free seats, Spark split into sessions). |
 | "What does it cost to be a trainer?" | **The fixed costs.** Membership and certification, and how many paid seats or workshops cover a month of membership at their price. |
 
-## The margin table
+## The margin tables
 
-Show the working, so the trainer can check it and reuse it.
+Show the working as two Markdown tables, never as a block of text, so the trainer can see
+it at a glance, check it and reuse it. Fill them from `fees.md` and the trainer's numbers.
 
-```
-Client pays you:        <their price and currency>
-Seats:                  <n> participants
-Adaptig seat fee:       <block by block, with the prices from fees.md, each step shown>
-Monthly credit:         <minus the monthly credit from fees.md, if they still have this month's three free seats; otherwise none>
-You pay Adaptig:        <the fee>
-Left for you:           <price minus fee>, before your own costs and tax
-```
+**What is left for you**
 
-- For Shift and Shape, replace the seat lines with the session fee: sessions × fee.
+| | Amount |
+|---|---|
+| Client pays you | <their price and currency> |
+| Participants | <n> |
+| Seat fee you pay Adaptig | <the total from the table below, in US dollars> |
+| Monthly credit | <minus the monthly credit from fees.md, if they still have this month's three free seats; otherwise "none"> |
+| **You pay Adaptig** | **<the fee>** |
+| **Left for you** | **<price minus fee>**, before your own costs and tax |
+
+**How the seat fee adds up**
+
+| Seats | Fee per seat | Subtotal |
+|---|---|---|
+| <first block, e.g. 1–10> | <price from fees.md> | <seats × price> |
+| <each further block the class reaches> | … | … |
+| **Total** | | **<sum>** |
+
+- For Shift and Shape, the second table is sessions × the session fee, one row per
+  session type.
+- The trainer's currency may be in their saved details
+  ([trainer-details.md](../brand-voice/references/trainer-details.md)); use it, and still
+  ask for the exchange rate.
 - Keep currencies apart. Fees are in US dollars; if the trainer charges in another
   currency, show the fee in dollars, ask once for the rate they want to use, and finish
   the last line when they give it. Do not supply a rate yourself.

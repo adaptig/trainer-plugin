@@ -29,6 +29,10 @@ OUTPUTS = {
     "linkedin.html": ("linkedin", True),
 }
 MAX_INPUT_BYTES = 2 * 1024 * 1024
+# The language of the client-facing text, as a BCP 47 tag. It sets <html lang>, which
+# makes the browser pick the right glyphs (zh-Hant-HK gets Hong Kong forms, not Japanese
+# or Simplified ones), and a zh tag switches the pack's own labels to Traditional Chinese.
+LANG_TAG = re.compile(r"[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8}){0,3}")
 DOC_NAMES = {"workshop": "Workshop", "proposal": "Proposal", "one-pager": "One-pager", "linkedin": "LinkedIn post"}
 
 # Wording that belongs to the trainer's review, never to a document the client sees.
@@ -43,6 +47,8 @@ REVIEW_WORDING = [re.compile(p, re.IGNORECASE) for p in (
     r"ready for your review", r"review before use", r"\b(?:priced|scope|unpriced) draft\b",
     r"\bunpriced\b", r"\bdraft material\b", r"not approved (?:adaptig )?curriculum",
     r"brand snapshot",
+    # the same review wording in Chinese (Traditional, then Simplified)
+    r"待確認|未確認|待定|供審閱|草稿版|待确认|未确认|供审阅",
     # a gap tag: the whole field, or a trailing "— unconfirmed" / "(proposed)"
     r"^\s*(?:unconfirmed|not supplied|not confirmed|to be confirmed)\W*$",
     r"[—–(:]\s*(?:unconfirmed|not supplied|not confirmed|to be confirmed|proposed)\s*\)?\s*\.?$",
@@ -114,9 +120,11 @@ def available_documents(data: dict) -> list[str]:
 def validate(data: Any) -> dict:
     """Validate explicit sections; never fill an absent document with invented content."""
     data = _object(data, "brief")
-    _known(data, {"company", "label", "status", "title", "subtitle", "audience", "duration", "participants", "learningOutcomes", "timeline", "exercise", "proposal", "linkedin", "onePager", "sourceNote", "brandNote", "preparedBy", "role", "contact", "date", "sources"}, "brief")
+    _known(data, {"company", "label", "status", "title", "subtitle", "audience", "duration", "participants", "learningOutcomes", "timeline", "exercise", "proposal", "linkedin", "onePager", "sourceNote", "brandNote", "preparedBy", "role", "contact", "date", "sources", "lang"}, "brief")
     for field in ("company", "label"):
         _text(data.get(field), field)
+    if "lang" in data and not LANG_TAG.fullmatch(_text(data["lang"], "lang")):
+        raise SchemaError("lang: use a language tag such as en, zh-Hant-HK or es")
     if "status" in data:  # the trainer's own record; never rendered or embedded
         _text(data["status"], "status")
     for field in ("title", "subtitle", "audience", "duration", "participants"):
@@ -229,7 +237,7 @@ def project_documents(data: dict, documents: list[str]) -> dict:
 
     `status` is the trainer's review record and never leaves the JSON.
     """
-    shared = {key: data[key] for key in ("company", "label", "sourceNote", "brandNote", "preparedBy", "role", "contact", "date", "sources") if key in data}
+    shared = {key: data[key] for key in ("company", "label", "sourceNote", "brandNote", "preparedBy", "role", "contact", "date", "sources", "lang") if key in data}
     for document in documents:
         if document == "workshop":
             for key in ("title", "subtitle", "audience", "duration", "participants", "learningOutcomes", "timeline", "exercise"):
@@ -311,8 +319,9 @@ def render(data: dict, *, document: str | None = None, single: bool = False,
         "DEFAULT_DOC": document,
         "SINGLE_DOCUMENT": "true" if single else "false",
         "TITLE": html.escape(f"{data['company']} · {DOC_NAMES[document]}"),
+        "LANG": data.get("lang", "en"),
     }
-    return re.sub(r"@@(BRAND_STYLE|WORDMARK_DATA|PACK_DATA|DEFAULT_DOC|SINGLE_DOCUMENT|TITLE)@@",
+    return re.sub(r"@@(BRAND_STYLE|WORDMARK_DATA|PACK_DATA|DEFAULT_DOC|SINGLE_DOCUMENT|TITLE|LANG)@@",
                   lambda match: replacements[match.group(1)], template)
 
 

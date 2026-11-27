@@ -1,11 +1,11 @@
 ---
 name: "explainer-one-pager"
-description: "Make a finished visual one-page explainer, client leave-behind, workshop handout or info card. Research current claims, write for the reader, and deliver a checked A4 PDF with the independent publisher when available, or a matching editable HTML one-pager through the workshop pack renderer. Show the actual preview where supported. Use when: one-pager, one page on, explainer, brief, handout, explain this to a client, summary sheet."
+description: "Make a finished visual one-page pre-workshop agenda, explainer, client leave-behind, workshop handout or info card. Research current claims, write for the reader, and deliver a checked A4 PDF with the independent publisher when available, or a matching editable HTML one-pager through the workshop pack renderer. Show the actual preview where supported. Use when: pre-workshop agenda, agenda for the client, one-pager, one page on, explainer, brief, handout, explain this to a client, summary sheet."
 license: "MIT"
 metadata:
   department: "content"
   author: "Adaptig"
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Explainer one-pager
@@ -15,6 +15,17 @@ actual visual client leave-behind or workshop handout. Use the independent publi
 a verified one-page A4 PDF, or the companion workshop-pack renderer for a matched HTML
 collection. Commercial offers belong in the bundled `workshop-proposal` workflow and the
 trainer's current approved commercial process; an explainer is not a price offer.
+
+## Pre-workshop agenda
+
+The page trainers use most is the agenda a client reads before the workshop (step 4 of
+the trainer flow, `/adaptig-trainer:agenda`). It is built from the agreed proposal or a
+timed plan, not from research: skip the evidence step below. Use the compact sheet with
+these parts: title; date, time and place when given; who it is for; three to five things
+participants will be able to do; the day at a glance (four to six blocks, each with its
+time and one line); what to bring or set up beforehand; and the trainer's name and
+contact details in the footer, from their saved details
+([trainer-details.md](../brand-voice/references/trainer-details.md)). No prices.
 
 ## Intake
 
@@ -70,7 +81,8 @@ Use bundled `branding-guidelines` for the overall logo, colour, icon and co-bran
 rules; its rules and this local renderer's asset snapshot should stay consistent.
 
 Work in a writable scratch/output folder outside the installed skill. Copy
-`adaptig-brand/layout/template.html`, fill its slots, and remove unused sections and
+`adaptig-brand/layout/template.html`, fill its slots (including `{{LANG}}`, the page's
+language tag such as `en` or `zh-Hant-HK`), and remove unused sections and
 unfilled placeholders. Leave the template's `../adaptig-brand/...` references intact:
 the publisher resolves them against the bundled pack at render time.
 
@@ -157,7 +169,7 @@ Never send, post or publish the result unless the user explicitly requests that 
 
 ## Language
 
-Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes.
+Answer the trainer in the language they write to you in. Write anything a client will read in the language the trainer names; when they name none, use the language of their brief or notes. [languages.md](../brand-voice/references/languages.md) says how to choose it, how to write Traditional Chinese (Hong Kong), and how to set the language of a file.
 
 
 ## Self-Improvement Loop
