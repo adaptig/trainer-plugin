@@ -1,0 +1,32 @@
+/* Adaptig brand pack — social post layouts (workshop-post).
+   1080×1350 (4:5) by default; body.square switches to 1080×1080.
+   Same tokens, fonts, shapes and logo as the one-pager. Nothing here introduces a
+   colour, a face or a shape that is not in the pack. */
+html, body { margin: 0; background: var(--paper-beige); color: var(--charcoal-black);
+  font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+body { width: 1080px; height: 1350px; overflow: hidden; }
+body.square { height: 1080px; }
+.page { position: relative; width: 1080px; height: 1350px; overflow: hidden; }
+body.square .page { height: 1080px; }
+
+/* Type — display over body, emphasis by weight. */
+.kicker { font-family: var(--font-body); font-weight: 700; font-size: 26px;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--orange-peel); }
+.h { font-family: var(--font-display); font-weight: 700; line-height: 1.02;
+  letter-spacing: -.01em; margin: 18px 0 26px; }
+.sub { font-family: var(--font-body); font-weight: 500; font-size: 30px; line-height: 1.3; }
+:lang(zh) .h, :lang(zh) .sub, :lang(zh) .kicker { font-family: var(--font-cjk); letter-spacing: 0; }
+
+/* The photo is only ever cropped — object-position carries the focal hint. */
+.photo { position: absolute; background-repeat: no-repeat; background-size: cover; }
+
+/* Logomark. On dark, it sits in a paper chip: the pack ships the mark in charcoal only
+   and the mark is never recoloured. */
+.mark { position: absolute; width: 88px; height: 88px; }
+.mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.chip { background: var(--paper-beige); border-radius: 22px; padding: 16px; box-sizing: border-box; }
+
+/* Carousel slide counter — delete the element on a single image. */
+.counter { position: absolute; right: 72px; top: 72px; font-weight: 600; font-size: 24px;
+  color: var(--paper-beige); background: rgba(33,33,36,.55); padding: 12px 22px; border-radius: 999px; }
+.counter.on-paper { color: var(--ink-soft); background: none; top: auto; bottom: 80px; padding: 0; }

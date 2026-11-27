@@ -117,7 +117,8 @@ _SLOT = re.compile(r"\{\{\s*[A-Za-z0-9_]+\s*\}\}")
 _REVIEW_WORDING = re.compile(
     r"ready for your review|review before use|\bdraft material\b|"
     r"\b(?:priced|scope|unpriced) draft\b|not approved (?:adaptig )?curriculum|"
-    r"lorem ipsum|\b(?:TBD|TODO)\b", re.IGNORECASE)
+    r"lorem ipsum|\b(?:TBD|TODO)\b|"
+    r"待確認|未確認|待定|供審閱|草稿版|待确认|未确认|供审阅", re.IGNORECASE)
 _COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
 _NON_TEXT = re.compile(r"<(script|style)\b.*?</\1\s*>", re.DOTALL | re.IGNORECASE)
 _TAG = re.compile(r"<[^>]+>")

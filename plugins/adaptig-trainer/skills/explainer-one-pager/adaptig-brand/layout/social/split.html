@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="../adaptig-brand/fonts/fonts.css">
+<link rel="stylesheet" href="../adaptig-brand/tokens.css">
+<link rel="stylesheet" href="../adaptig-brand/layout/social/social.css">
+<script src="../adaptig-brand/layout/social/fit.js"></script>
+<!-- split: photo top two-thirds, paper panel below, orange arch bleeding off the
+     corner on its curve. Posters and non-LinkedIn materials. -->
+<style>
+.photo { left: 0; top: 0; width: 1080px; height: 860px; background-image: url("{{PHOTO_SRC}}"); background-position: {{FOCAL}}; }
+body.square .photo { height: 640px; }
+.panel { position: absolute; left: 0; top: 860px; width: 1080px; bottom: 0; background: var(--paper-beige); }
+body.square .panel { top: 640px; }
+.arch { position: absolute; right: -150px; bottom: -250px; width: 470px; }
+.txt { position: absolute; left: 72px; top: 928px; width: 760px; max-height: 340px; overflow: hidden; }
+body.square .txt { top: 700px; max-height: 320px; }
+.h { font-size: 80px; margin: 16px 0 22px; }
+.sub { color: var(--ink-soft); font-size: 27px; }
+.mark { right: 72px; top: 900px; width: 80px; height: 80px; }
+body.square .mark { top: 680px; }
+</style>
+</head>
+<body class="{{SIZE_CLASS}}"><div class="page">
+  <div class="photo"></div><div class="panel"></div>
+  <img class="arch" src="../adaptig-brand/shapes/orange/arch.png" alt="">
+  <div class="txt">
+    <div class="kicker">{{KICKER}}</div>
+    <div class="h">{{HEADLINE}}</div>
+    <div class="sub">{{SUBLINE}}</div>
+  </div>
+  <div class="mark"><img src="../adaptig-brand/logo/adaptig-logomark.png" alt="Adaptig"></div>
+</div></body></html>

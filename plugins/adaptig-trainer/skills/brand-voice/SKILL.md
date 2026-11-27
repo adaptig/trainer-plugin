@@ -5,12 +5,17 @@ license: "MIT"
 metadata:
   department: "brand"
   author: "Adaptig"
-  version: "0.6.0"
+  version: "0.7.0"
 ---
 
 # Brand voice for trainers
 
 Before describing Adaptig or its workshop methods, read [the trainer context snapshot](references/trainer-context.md). Use current approved workshop materials for exact product details; the snapshot supplies orientation, not commercial authority.
+
+Two references here are shared by every skill in the plugin: [trainer-details.md](references/trainer-details.md)
+(the trainer's name, role, contact, client language and currency, asked once and saved on
+their computer) and [languages.md](references/languages.md) (choosing the client's
+language, and writing Traditional Chinese for Hong Kong).
 
 For colours, typography, logos, icons, shapes and trainer co-branding, use the bundled
 `branding-guidelines` skill. It supplies the visual rules and actual files in this same

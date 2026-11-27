@@ -1,6 +1,6 @@
 # Adaptig trainer plugin
 
-A Claude plugin for Adaptig trainers. Six commands help you win a client, write the proposal, price and prepare the workshop, share it, and tell us what to improve.
+A Claude plugin for Adaptig trainers. Seven steps take you from the first message to a client to sharing the workshop afterwards. Start with `/adaptig-trainer:start` and it tells you which step you are on.
 
 ## Install
 
@@ -17,18 +17,24 @@ Then run `/reload-plugins`, or restart Claude Code.
 
 You don't need a GitHub account.
 
-## The six commands
+## The seven steps
 
-| Command | What you get |
-|---|---|
-| `/adaptig-trainer:win-client` | The message that gets you the meeting, then a proposal you can send |
-| `/adaptig-trainer:proposal` | A proposal from your meeting notes or the client's brief, at your price, ready to send |
-| `/adaptig-trainer:price-workshop` | What you pay Adaptig for the seats and what you keep at your price |
-| `/adaptig-trainer:prep-workshop` | A timed plan, exercises from the client's own work, participant sheets and a one-page handout |
-| `/adaptig-trainer:share-workshop` | A LinkedIn post before or after the workshop, and a referral ask |
-| `/adaptig-trainer:feedback` | Tells Adaptig what worked, what didn't, or what you want next |
+| Step | Command | What you get |
+|---|---|---|
+| | `/adaptig-trainer:start` | The steps, and which one you are on |
+| 1 | `/adaptig-trainer:win-client` | The message that gets you a meeting, or a follow-up when a client goes quiet |
+| 2 | `/adaptig-trainer:price-workshop` | What you pay Adaptig for the seats and what you keep at your price, as a table |
+| 3 | `/adaptig-trainer:proposal` | A proposal from your notes or the client's brief, at your price, ready to send |
+| 4 | `/adaptig-trainer:agenda` | A one-page agenda the client reads before the workshop |
+| 5 | `/adaptig-trainer:prep-workshop` | A quick timed plan first, then exercises from the client's own work, participant sheets and facilitator notes |
+| 6 | `/adaptig-trainer:share-workshop` | A LinkedIn post with an image to upload, and a referral ask |
+| 7 | `/adaptig-trainer:feedback` | Tells Adaptig what worked, what didn't, or what you want next |
 
-Type `/adaptig` and pick one, or just say what you need. You set your own price; the plugin never invents one. `price-workshop` shows what you keep at it.
+Type `/adaptig` and pick one, or just say what you need. Every step ends by naming the next. You set your own price; the plugin never invents one.
+
+**Your details, asked once.** The first time a step puts your name on something for a client, it asks for your name, role, contact details, the language you write to clients in, and your currency, and saves them on your computer in `~/.adaptig/trainer-profile.md` (in Cowork, in the folder you connected). It never asks again. Say "change my details" to update them. The file stays on your computer; nothing in it is sent to Adaptig.
+
+**Languages.** Proposals, agendas and posts can be written in English, Traditional Chinese (Hong Kong) or any other language you ask for.
 
 ## What Adaptig counts
 

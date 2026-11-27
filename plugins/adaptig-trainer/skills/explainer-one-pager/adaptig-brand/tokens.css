@@ -20,7 +20,7 @@
      Nothing outside these two lines changes with the pairing. */
   --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-cjk: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --font-cjk: 'PingFang HK', 'Noto Sans HK', 'Noto Sans CJK HK', 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
 
   /* Ladder is proportional to body, never a fixed print-memo table.
      Emphasis comes from weight, never from shrinking everything around it. */

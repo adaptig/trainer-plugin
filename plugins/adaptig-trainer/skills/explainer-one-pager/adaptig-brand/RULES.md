@@ -15,22 +15,29 @@ font substitutes for portable collateral. Their SIL Open Font License notices sh
 for that commercial typeface. A supplied, licensed design may use it separately.
 
 Use the type ladder in `tokens.css` and weight for emphasis. If content overflows, cut
-content before changing size. CJK text falls through to the system fonts in the stack;
-check missing glyphs before handing over a multilingual file.
+content before changing size. Set `<html lang>` to the page's language (`en`,
+`zh-Hant-HK`…): it makes the browser pick Hong Kong glyph forms for Chinese text, and the
+social layouts switch Chinese headlines to `--font-cjk`. No Chinese font is bundled; the
+page uses the system's. On Linux (Cowork), check `fc-list :lang=zh-hk` before rendering
+Chinese; with no font listed, hand over the HTML instead of a PDF or PNG.
 
 ## Logo and shapes
 
-Use `logo/adaptig-wordmark.png` as supplied. Never redraw, stretch or recolour it. Keep
-clearspace around the mark. The two light-blue shapes included here are real source
-assets: `asterisk.png` and `quatrefoil.png`. Use at most one per page, behind the content,
-cropped on a curved edge. Other shapes are not included in this starter pack.
+Use `logo/adaptig-wordmark.png` as supplied, and `logo/adaptig-logomark.png` where the
+social layouts call for the mark. Never redraw, stretch or recolour either. Keep
+clearspace around the mark. The shapes included here are real source assets: light-blue
+`asterisk.png` and `quatrefoil.png`, and orange `arch.png`, `asterisk.png` and `tulip.png`
+for the social layouts. Use at most one per page, behind the content, cropped on a curved
+edge. Other shapes are not included in this pack.
 
 For third-party marks, use the vendor's actual supplied/official file with appropriate
 usage rights or set the name in text. A mark identifies a tool, not an endorsement.
 
 ## Page and delivery
 
-Use `layout/template.html` and `layout/one-pager-a4.css`. All output must be one A4 page
+Social images use `layout/social/` (see its README) and `tools/publish.py --png`.
+
+For the one-pager, use `layout/template.html` and `layout/one-pager-a4.css`. All output must be one A4 page
 with readable source notes. Keep the `../adaptig-brand/` paths when writing scratch HTML;
 `tools/publish.py` rewrites them to this pack during rendering. Remove all unused slots.
 

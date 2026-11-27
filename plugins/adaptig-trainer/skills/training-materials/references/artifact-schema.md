@@ -44,6 +44,7 @@ No renderer validation can establish that input facts or commercial terms are co
 |---|---|
 | `company`, `label` | Text. The client organisation, and one client-facing context line shown under it, such as `Workshop proposal for Anna Example, Operations Director`. For a fictional demo, say so in `label`. Never a review status. |
 | `status` | Optional text. The trainer's own review record. It is never rendered or embedded in any HTML; report the status to the trainer in chat. |
+| `lang` | Optional. The language tag of the client-facing text: `en` (the default), `zh-Hant-HK`, `es`… It sets the page language, so the browser picks the right glyphs, and a `zh` tag also prints the pack's own headings ("Investment", "Prepared by"…) in Traditional Chinese. |
 | `title`, `subtitle` | Workshop only. Text. Workshop title and reader-oriented explanation. |
 | `audience`, `duration`, `participants` | Workshop only. Text, including units, written for the reader. For example `3 hours 30 minutes, including a break`, `About 12 people per group`. |
 | `learningOutcomes` | Workshop only. Array of outcome strings. |

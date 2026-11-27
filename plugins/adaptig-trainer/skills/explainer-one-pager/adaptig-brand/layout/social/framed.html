@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="../adaptig-brand/fonts/fonts.css">
+<link rel="stylesheet" href="../adaptig-brand/tokens.css">
+<link rel="stylesheet" href="../adaptig-brand/layout/social/social.css">
+<script src="../adaptig-brand/layout/social/fit.js"></script>
+<!-- framed: paper frame, inset photo with rounded corners, one asterisk as
+     punctuation. Quieter; suits a portrait photo. -->
+<style>
+.photo { left: 72px; top: 72px; width: 936px; height: 900px; border-radius: 28px; background-image: url("{{PHOTO_SRC}}"); background-position: {{FOCAL}}; }
+body.square .photo { height: 660px; }
+.ast { position: absolute; left: -90px; top: 880px; width: 300px; }
+body.square .ast { top: 640px; }
+.txt { position: absolute; left: 250px; right: 72px; top: 1010px; max-height: 260px; overflow: hidden; }
+body.square .txt { top: 770px; }
+.h { font-size: 60px; margin: 12px 0 16px; }
+.sub { font-size: 26px; color: var(--ink-soft); }
+.mark { right: 72px; bottom: 64px; width: 72px; height: 72px; }
+</style>
+</head>
+<body class="{{SIZE_CLASS}}"><div class="page">
+  <div class="photo"></div>
+  <img class="ast" src="../adaptig-brand/shapes/orange/asterisk.png" alt="">
+  <div class="txt">
+    <div class="kicker">{{KICKER}}</div>
+    <div class="h">{{HEADLINE}}</div>
+    <div class="sub">{{SUBLINE}}</div>
+  </div>
+  <div class="mark"><img src="../adaptig-brand/logo/adaptig-logomark.png" alt="Adaptig"></div>
+</div></body></html>
